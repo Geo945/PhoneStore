@@ -9,11 +9,7 @@
         $user_name = $_POST['LoginUsername'];
         $password = $_POST['LoginPassword'];
 
-        if( $user_name == "Admin" && $password == "parolaparolaparola"){
-            $_SESSION['user_id'] = '83603738';
-            header("Location: admin.php");
-            die;
-        }
+
 
 
         if( !empty($user_name) && !empty($password) ){
@@ -30,6 +26,10 @@
 
                     if( $user_data['password'] == $password ){
                         $_SESSION['user_id'] = $user_data['user_id'];
+                        if($user_data['user_id'] == '83603738'){
+                            header("Location: admin.php");
+                            die;
+                        }
                         header("Location: index.php");
                         die;
                     }else{

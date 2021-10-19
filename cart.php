@@ -45,7 +45,9 @@ $user_data = check_login($con);
                             <a href="logout.php">Logout</a>
                         </li>
                         <li>
-                            <?php echo $user_data['user_name']; ?>
+                            <a href="changePassword.php">
+                                <?php echo $user_data['user_name']; ?>
+                            </a>
                         </li>
 
                     </ul>
