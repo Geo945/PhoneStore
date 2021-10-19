@@ -30,7 +30,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
         $fileExt = explode('.', $fileName);
         $fileActualExt = strtolower(end($fileExt));
 
-        $allowed = array('jpg', 'jpeg', 'png');
+        $allowed = array('jpg', 'jpeg', 'png', 'PNG', 'JPG', 'JPEG');
 
         if( in_array($fileActualExt, $allowed) ){
 
